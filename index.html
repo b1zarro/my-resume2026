@@ -6,12 +6,10 @@
     <meta name="description" content="Резюме Артёма Мурашевского — аналитик, исследователь, специалист по контенту и AI. Санкт-Петербург.">
     <title>Резюме - Мурашевский Артём</title>
     
-    <!-- Подключение шрифтов (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Подключение Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -49,7 +47,8 @@
             }
             @page {
                 size: A4;
-                margin: 1.2cm;
+                /* Немного уменьшили отступы на странице для печати */
+                margin: 0.8cm; 
             }
             .page-break-inside-avoid {
                 break-inside: avoid;
@@ -59,95 +58,85 @@
 </head>
 <body class="text-slate-700 antialiased py-12 print:py-0 selection:bg-brand-100 selection:text-brand-900">
 
-    <!-- Главный контейнер (Card) -->
-    <main class="max-w-5xl mx-auto bg-white sm:rounded-2xl sm:shadow-lg sm:ring-1 sm:ring-slate-900/5 overflow-hidden print:shadow-none print:ring-0 print:rounded-none min-h-[1122px]">
+    <main class="max-w-5xl mx-auto bg-white sm:rounded-2xl sm:shadow-lg sm:ring-1 sm:ring-slate-900/5 overflow-hidden print:shadow-none print:ring-0 print:rounded-none min-h-[1122px] print:min-h-0 print:m-0 print:overflow-visible">
         
-        <!-- Шапка (Header) -->
-        <header class="bg-white border-b border-slate-100 px-8 py-10 sm:px-12 sm:py-12 flex flex-col-reverse sm:flex-row justify-between items-center sm:items-start gap-8 print:p-0 print:border-b-2 print:border-slate-200 print:pb-8">
+        <header class="bg-white border-b border-slate-100 px-8 py-10 sm:px-12 sm:py-12 flex flex-col-reverse sm:flex-row justify-between items-center sm:items-start gap-8 print:py-4 print:px-2 print:border-b-2 print:border-slate-200 print:gap-4">
             <div class="flex-1 text-center sm:text-left">
-                <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight sm:text-5xl mb-2">Артём Мурашевский</h1>
-                <p class="text-lg font-medium text-brand-600 tracking-wide uppercase mb-6">Аналитик · Исследователь · Контент & AI</p>
+                <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight sm:text-5xl mb-2 print:text-3xl print:mb-1">Артём Мурашевский</h1>
+                <p class="text-lg font-medium text-brand-600 tracking-wide uppercase mb-6 print:text-sm print:mb-3">Аналитик · Исследователь · Контент & AI</p>
                 
-                <p class="text-sm leading-relaxed text-slate-600 max-w-2xl">
+                <p class="text-sm leading-relaxed text-slate-600 max-w-2xl print:text-xs print:leading-normal">
                     Студент-социолог (СПбГЭУ), специализируюсь на пересечении данных, поведения аудиторий и цифровой культуры. Провожу исследования полного цикла: от дизайна опроса до анализа и визуализации результатов. Активно применяю AI-инструменты в аналитической работе. Разрабатываю цифровые продукты (расширения, боты).
                 </p>
             </div>
             
-            <!-- Аватар -->
             <div class="shrink-0 relative group">
-                <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shadow-sm ring-1 ring-slate-900/10 bg-slate-50 rotate-3 transition-transform duration-300 group-hover:rotate-0 print:rotate-0">
+                <div class="w-32 h-32 sm:w-40 sm:h-40 print:w-28 print:h-28 rounded-2xl overflow-hidden shadow-sm ring-1 ring-slate-900/10 bg-slate-50 rotate-3 transition-transform duration-300 group-hover:rotate-0 print:rotate-0">
                     <img src="avatarkaaaa.png" alt="Фото Артёма Мурашевского" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'flex h-full w-full items-center justify-center text-slate-400 text-sm font-medium\'>АМ</span>'">
                 </div>
             </div>
         </header>
 
-        <!-- Основная сетка контента -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 p-8 sm:p-12 print:p-0 print:pt-8 print:gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 p-8 sm:p-12 print:p-2 print:pt-4 print:gap-6">
             
-            <!-- ЛЕВАЯ КОЛОНКА (Основной контент - 8 колонок) -->
-            <div class="md:col-span-8 space-y-10">
+            <div class="md:col-span-8 space-y-10 print:space-y-6">
                 
-                <!-- Проекты и Исследования -->
                 <section>
-                    <div class="flex items-center gap-3 mb-6">
+                    <div class="flex items-center gap-3 mb-6 print:mb-3">
                         <div class="p-2 bg-brand-50 rounded-lg text-brand-600 print:p-0 print:bg-transparent">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                            <svg class="w-5 h-5 print:w-4 print:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                         </div>
-                        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Проекты & Исследования</h2>
+                        <h2 class="text-2xl font-bold text-slate-900 tracking-tight print:text-lg">Проекты & Исследования</h2>
                     </div>
 
-                    <div class="space-y-8">
-                        <!-- Проект 1 -->
+                    <div class="space-y-8 print:space-y-4">
                         <div class="relative pl-6 border-l-2 border-slate-100 print:border-slate-300 page-break-inside-avoid group">
                             <div class="absolute w-3 h-3 bg-white border-2 border-brand-500 rounded-full -left-[7px] top-1.5 shadow-sm group-hover:bg-brand-500 transition-colors duration-300"></div>
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-2">
-                                <h3 class="text-lg font-bold text-slate-900">Браузерное расширение YouTube Like/Dislike</h3>
-                                <span class="inline-flex items-center rounded-md bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 ring-1 ring-inset ring-slate-500/10 shrink-0">2025 — н.в.</span>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-2 print:gap-0">
+                                <h3 class="text-lg font-bold text-slate-900 print:text-base">Браузерное расширение YouTube Like/Dislike</h3>
+                                <span class="inline-flex items-center rounded-md bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 ring-1 ring-inset ring-slate-500/10 shrink-0 print:border-0 print:bg-transparent print:p-0 print:text-right">2025 — н.в.</span>
                             </div>
-                            <h4 class="text-sm font-medium text-brand-600 mb-3">Chrome Web Store + Firefox Add-ons | JS, API</h4>
-                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 marker:text-slate-400">
+                            <h4 class="text-sm font-medium text-brand-600 mb-3 print:mb-1 print:text-xs">Chrome Web Store + Firefox Add-ons | JS, API</h4>
+                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 marker:text-slate-400 print:text-xs print:space-y-0.5">
                                 <li>Самостоятельно разработал и опубликовал расширение для двух платформ, отображающее скрытую статистику YouTube через интеграцию с API.</li>
                                 <li>Реализовал полный цикл: идея → разработка → тестирование → публикация в маркетплейсах.</li>
                             </ul>
                         </div>
 
-                        <!-- Проект 2 -->
                         <div class="relative pl-6 border-l-2 border-slate-100 print:border-slate-300 page-break-inside-avoid group">
                             <div class="absolute w-3 h-3 bg-white border-2 border-brand-500 rounded-full -left-[7px] top-1.5 shadow-sm group-hover:bg-brand-500 transition-colors duration-300"></div>
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-2">
-                                <h3 class="text-lg font-bold text-slate-900">«Корпоративный Паноптикум»</h3>
-                                <span class="inline-flex items-center rounded-md bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 ring-1 ring-inset ring-slate-500/10 shrink-0">2025</span>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-2 print:gap-0">
+                                <h3 class="text-lg font-bold text-slate-900 print:text-base">«Корпоративный Паноптикум»</h3>
+                                <span class="inline-flex items-center rounded-md bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 ring-1 ring-inset ring-slate-500/10 shrink-0 print:border-0 print:bg-transparent print:p-0 print:text-right">2025</span>
                             </div>
-                            <h4 class="text-sm font-medium text-brand-600 mb-3">Геймификация, Разработка Telegram-бота, Теория игр</h4>
-                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 marker:text-slate-400">
+                            <h4 class="text-sm font-medium text-brand-600 mb-3 print:mb-1 print:text-xs">Геймификация, Разработка Telegram-бота, Теория игр</h4>
+                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 marker:text-slate-400 print:text-xs print:space-y-0.5">
                                 <li>Спроектировал геймифицированную систему оценки лояльности сотрудников (сценарий, механика баллов, дилеммы выбора).</li>
                                 <li>Реализовал бота для взаимодействия с аудиторией в реальном времени, провёл публичную презентацию с разбором поведенческих паттернов.</li>
                             </ul>
                         </div>
 
-                        <!-- Проект 3 -->
                         <div class="relative pl-6 border-l-2 border-slate-100 print:border-slate-300 page-break-inside-avoid group">
                             <div class="absolute w-3 h-3 bg-white border-2 border-brand-500 rounded-full -left-[7px] top-1.5 shadow-sm group-hover:bg-brand-500 transition-colors duration-300"></div>
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-2">
-                                <h3 class="text-lg font-bold text-slate-900">Исследование корпоративной культуры Ubisoft</h3>
-                                <span class="inline-flex items-center rounded-md bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 ring-1 ring-inset ring-slate-500/10 shrink-0">2025 — 2026</span>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-2 print:gap-0">
+                                <h3 class="text-lg font-bold text-slate-900 print:text-base">Исследование корпоративной культуры Ubisoft</h3>
+                                <span class="inline-flex items-center rounded-md bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 ring-1 ring-inset ring-slate-500/10 shrink-0 print:border-0 print:bg-transparent print:p-0 print:text-right">2025 — 2026</span>
                             </div>
-                            <h4 class="text-sm font-medium text-brand-600 mb-3">Учебный проект | Кейс-стади, Контент-анализ</h4>
-                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 marker:text-slate-400">
+                            <h4 class="text-sm font-medium text-brand-600 mb-3 print:mb-1 print:text-xs">Учебный проект | Кейс-стади, Контент-анализ</h4>
+                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 marker:text-slate-400 print:text-xs print:space-y-0.5">
                                 <li>Мультиметодное исследование 69 открытых источников (судебные акты, ESG-отчёты).</li>
                                 <li>Разработал <em>Матрицу кадровых политик</em> для оценки кадровых практик и составил 10-летний инвестиционный план восстановления репутации компании.</li>
                             </ul>
                         </div>
 
-                        <!-- Проект 4 -->
                         <div class="relative pl-6 border-l-2 border-slate-100 print:border-slate-300 page-break-inside-avoid group">
                             <div class="absolute w-3 h-3 bg-white border-2 border-brand-500 rounded-full -left-[7px] top-1.5 shadow-sm group-hover:bg-brand-500 transition-colors duration-300"></div>
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-2">
-                                <h3 class="text-lg font-bold text-slate-900">Академические и рыночные исследования</h3>
-                                <span class="inline-flex items-center rounded-md bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 ring-1 ring-inset ring-slate-500/10 shrink-0">2024 — 2026</span>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-2 print:gap-0">
+                                <h3 class="text-lg font-bold text-slate-900 print:text-base">Академические и рыночные исследования</h3>
+                                <span class="inline-flex items-center rounded-md bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 ring-1 ring-inset ring-slate-500/10 shrink-0 print:border-0 print:bg-transparent print:p-0 print:text-right">2024 — 2026</span>
                             </div>
-                            <h4 class="text-sm font-medium text-brand-600 mb-3">СПбГЭУ</h4>
-                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 marker:text-slate-400">
+                            <h4 class="text-sm font-medium text-brand-600 mb-3 print:mb-1 print:text-xs">СПбГЭУ</h4>
+                            <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 marker:text-slate-400 print:text-xs print:space-y-0.5">
                                 <li><strong class="font-semibold text-slate-800">Мониторинг соцмедиа (2026):</strong> Контент-анализ >1500 публикаций ВКонтакте, классификация городских проблем, разработка рекомендаций для управления.</li>
                                 <li><strong class="font-semibold text-slate-800">Кризис маскулинности (2025):</strong> Полный дизайн социологического исследования (опрос + глубинные интервью), синтез международных данных.</li>
                                 <li><strong class="font-semibold text-slate-800">Рынок стриминга (2024):</strong> Анализ рынка объёмом $45,5 млрд, оценка влияния алгоритмов на потребление.</li>
@@ -156,23 +145,22 @@
                     </div>
                 </section>
 
-                <!-- Опыт работы -->
                 <section class="page-break-inside-avoid">
-                    <div class="flex items-center gap-3 mb-6">
+                    <div class="flex items-center gap-3 mb-6 print:mb-3">
                         <div class="p-2 bg-brand-50 rounded-lg text-brand-600 print:p-0 print:bg-transparent">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <svg class="w-5 h-5 print:w-4 print:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         </div>
-                        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Опыт работы</h2>
+                        <h2 class="text-2xl font-bold text-slate-900 tracking-tight print:text-lg">Опыт работы</h2>
                     </div>
 
                     <div class="relative pl-6 border-l-2 border-slate-100 print:border-slate-300 page-break-inside-avoid group">
                             <div class="absolute w-3 h-3 bg-white border-2 border-brand-500 rounded-full -left-[7px] top-1.5 shadow-sm group-hover:bg-brand-500 transition-colors duration-300"></div>
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-2">
-                            <h3 class="text-lg font-bold text-slate-900">Менеджер по продажам / Консультант</h3>
-                            <span class="inline-flex items-center rounded-md bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 ring-1 ring-inset ring-slate-500/10 shrink-0">Март 2022 — Авг 2022</span>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-2 print:gap-0">
+                            <h3 class="text-lg font-bold text-slate-900 print:text-base">Менеджер по продажам / Консультант</h3>
+                            <span class="inline-flex items-center rounded-md bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-600 ring-1 ring-inset ring-slate-500/10 shrink-0 print:border-0 print:bg-transparent print:p-0 print:text-right">Март 2022 — Авг 2022</span>
                         </div>
-                        <h4 class="text-sm font-medium text-brand-600 mb-3">от Папы Саши | Санкт-Петербург</h4>
-                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 marker:text-slate-400">
+                        <h4 class="text-sm font-medium text-brand-600 mb-3 print:mb-1 print:text-xs">от Папы Саши | Санкт-Петербург</h4>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 marker:text-slate-400 print:text-xs print:space-y-0.5">
                             <li>Консультировал клиентов по продукции, выявлял потребности и вел клиентскую базу.</li>
                             <li>Заключал договоры, оформлял документацию, контролировал оплаты и логистику.</li>
                             <li><strong class="font-semibold text-slate-800">Результат:</strong> Рост числа повторных покупок, повышение лояльности (LTV) клиентов.</li>
@@ -180,67 +168,63 @@
                     </div>
                 </section>
 
-                <!-- Образование -->
                 <section class="page-break-inside-avoid">
-                    <div class="flex items-center gap-3 mb-6">
+                    <div class="flex items-center gap-3 mb-6 print:mb-3">
                         <div class="p-2 bg-brand-50 rounded-lg text-brand-600 print:p-0 print:bg-transparent">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                            <svg class="w-5 h-5 print:w-4 print:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
                         </div>
-                        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Образование</h2>
+                        <h2 class="text-2xl font-bold text-slate-900 tracking-tight print:text-lg">Образование</h2>
                     </div>
 
-                    <div class="grid grid-cols-1 gap-6">
+                    <div class="grid grid-cols-1 gap-6 print:gap-3">
                         <div>
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
-                                <h3 class="text-base font-bold text-slate-900">Социология управления (Бакалавриат)</h3>
-                                <span class="text-sm font-medium text-slate-500">2023 — 2027</span>
+                                <h3 class="text-base font-bold text-slate-900 print:text-sm">Социология управления (Бакалавриат)</h3>
+                                <span class="text-sm font-medium text-slate-500 print:text-xs">2023 — 2027</span>
                             </div>
-                            <p class="text-sm text-slate-600">Санкт-Петербургский государственный экономический университет (СПбГЭУ)</p>
+                            <p class="text-sm text-slate-600 print:text-xs">Санкт-Петербургский государственный экономический университет (СПбГЭУ)</p>
                         </div>
 
                         <div>
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
-                                <h3 class="text-base font-bold text-slate-900">Сети связи и системы коммутации (ССУЗ)</h3>
-                                <span class="text-sm font-medium text-slate-500">2020 — 2022</span>
+                                <h3 class="text-base font-bold text-slate-900 print:text-sm">Сети связи и системы коммутации (ССУЗ)</h3>
+                                <span class="text-sm font-medium text-slate-500 print:text-xs">2020 — 2022</span>
                             </div>
-                            <p class="text-sm text-slate-600">СПбГУТ им. проф. М.А. Бонч-Бруевича</p>
+                            <p class="text-sm text-slate-600 print:text-xs">СПбГУТ им. проф. М.А. Бонч-Бруевича</p>
                         </div>
 
                         <div>
                             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
-                                <h3 class="text-base font-bold text-slate-900">Нейросети: практический курс</h3>
-                                <span class="text-sm font-medium text-slate-500">2025</span>
+                                <h3 class="text-base font-bold text-slate-900 print:text-sm">Нейросети: практический курс</h3>
+                                <span class="text-sm font-medium text-slate-500 print:text-xs">2025</span>
                             </div>
-                            <p class="text-sm text-slate-600">Skillbox | Искусственный интеллект, машинное обучение, работа с LLM</p>
+                            <p class="text-sm text-slate-600 print:text-xs">Skillbox | Искусственный интеллект, машинное обучение, работа с LLM</p>
                         </div>
                     </div>
                 </section>
 
             </div>
 
-            <!-- ПРАВАЯ КОЛОНКА (Сайдбар - 4 колонки) -->
-            <div class="md:col-span-4 space-y-10 mt-10 md:mt-0">
+            <div class="md:col-span-4 space-y-10 mt-10 md:mt-0 print:space-y-6">
                 
-                <!-- Контакты -->
                 <section class="bg-slate-50 p-6 rounded-2xl print:bg-transparent print:p-0 page-break-inside-avoid">
-                    <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-5">Контакты</h2>
-                    <ul class="space-y-4 text-sm">
+                    <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-5 print:mb-2 print:text-xs">Контакты</h2>
+                    <ul class="space-y-4 text-sm print:space-y-2 print:text-xs">
                         <li>
                             <a href="tel:+79119373455" class="flex items-center text-slate-600 hover:text-brand-600 transition-colors group">
-                                <svg class="w-5 h-5 mr-3 text-slate-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <svg class="w-5 h-5 mr-3 text-slate-400 group-hover:text-brand-500 transition-colors print:w-4 print:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                                 +7 (911) 937-34-55
                             </a>
                         </li>
                         <li>
                             <a href="mailto:vrtyom.mur@gmail.com" class="flex items-center text-slate-600 hover:text-brand-600 transition-colors group">
-                                <svg class="w-5 h-5 mr-3 text-slate-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <svg class="w-5 h-5 mr-3 text-slate-400 group-hover:text-brand-500 transition-colors print:w-4 print:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                                 vrtyom.mur@gmail.com
                             </a>
                         </li>
                         <li>
     <a href="https://t.me/hardcoredelusion" target="_blank" rel="noopener noreferrer" class="flex items-center text-slate-600 hover:text-brand-600 transition-colors group">
-        <!-- Добавлены классы shrink-0 и overflow-visible -->
-        <svg class="w-5 h-5 mr-3 text-slate-400 group-hover:text-brand-500 transition-colors shrink-0 overflow-visible" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="w-5 h-5 mr-3 text-slate-400 group-hover:text-brand-500 transition-colors shrink-0 overflow-visible print:w-4 print:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-17.5 7.71a2.243 2.243 0 0 0-.256 4.015l4.33 2.327 2.052 6.155a1.122 1.122 0 0 0 1.954.267l3.228-3.69 5.378 3.968a2.242 2.242 0 0 0 3.567-1.503l3.33-17.5a2.243 2.243 0 0 0-2.486-2.583l-2.575.62zM7.22 14.282l10.455-8.894-8.89 9.69.006.002-1.571 4.71z"></path>
         </svg>
         @hardcoredelusion
@@ -248,52 +232,50 @@
 </li>
 
                         <li class="flex items-start text-slate-600">
-                            <svg class="w-5 h-5 mr-3 text-slate-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <svg class="w-5 h-5 mr-3 text-slate-400 shrink-0 mt-0.5 print:w-4 print:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             <span>Санкт-Петербург<br><span class="text-xs text-slate-500">(гибрид / удалёнка / офис)</span></span>
                         </li>
                     </ul>
                 </section>
 
-                <!-- Навыки -->
                 <section class="page-break-inside-avoid">
-                    <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-5">Навыки</h2>
+                    <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-5 print:mb-2 print:text-xs">Навыки</h2>
                     
-                    <div class="mb-6">
-                        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Аналитика & Исследования</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Социологические опросы</span>
-                            <span class="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Контент-анализ</span>
-                            <span class="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Кейс-стади</span>
-                            <span class="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Визуализация данных</span>
-                            <span class="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Мат. статистика</span>
+                    <div class="mb-6 print:mb-3">
+                        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3 print:mb-1 print:text-[10px]">Аналитика & Исследования</h3>
+                        <div class="flex flex-wrap gap-2 print:gap-1">
+                            <span class="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 print:bg-transparent print:ring-slate-300 print:text-slate-700">Социологические опросы</span>
+                            <span class="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 print:bg-transparent print:ring-slate-300 print:text-slate-700">Контент-анализ</span>
+                            <span class="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 print:bg-transparent print:ring-slate-300 print:text-slate-700">Кейс-стади</span>
+                            <span class="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 print:bg-transparent print:ring-slate-300 print:text-slate-700">Визуализация данных</span>
+                            <span class="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 print:bg-transparent print:ring-slate-300 print:text-slate-700">Мат. статистика</span>
                         </div>
                     </div>
 
-                    <div class="mb-6">
-                        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Технологии & AI</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">Работа с LLM / Нейросети</span>
-                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">API-интеграции</span>
-                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">JS (расширения)</span>
-                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">Telegram-боты</span>
-                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10">Git</span>
+                    <div class="mb-6 print:mb-3">
+                        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3 print:mb-1 print:text-[10px]">Технологии & AI</h3>
+                        <div class="flex flex-wrap gap-2 print:gap-1">
+                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 print:bg-transparent print:ring-slate-300 print:text-slate-700">Работа с LLM / Нейросети</span>
+                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 print:bg-transparent print:ring-slate-300 print:text-slate-700">API-интеграции</span>
+                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 print:bg-transparent print:ring-slate-300 print:text-slate-700">JS (расширения)</span>
+                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 print:bg-transparent print:ring-slate-300 print:text-slate-700">Telegram-боты</span>
+                            <span class="inline-flex items-center rounded-md bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 print:bg-transparent print:ring-slate-300 print:text-slate-700">Git</span>
                         </div>
                     </div>
 
                     <div>
-                        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3">Инструменты & Контент</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-inset ring-slate-500/20">MS Office / Google Worspace</span>
-                            <span class="inline-flex items-center rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-inset ring-slate-500/20">Копирайтинг / Редактура</span>
-                            <span class="inline-flex items-center rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-inset ring-slate-500/20">Photoshop / Canva / CapCut</span>
+                        <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-3 print:mb-1 print:text-[10px]">Инструменты & Контент</h3>
+                        <div class="flex flex-wrap gap-2 print:gap-1">
+                            <span class="inline-flex items-center rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-inset ring-slate-500/20 print:bg-transparent print:ring-slate-300 print:text-slate-700">MS Office / Google Worspace</span>
+                            <span class="inline-flex items-center rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-inset ring-slate-500/20 print:bg-transparent print:ring-slate-300 print:text-slate-700">Копирайтинг / Редактура</span>
+                            <span class="inline-flex items-center rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 ring-1 ring-inset ring-slate-500/20 print:bg-transparent print:ring-slate-300 print:text-slate-700">Photoshop / Canva / CapCut</span>
                         </div>
                     </div>
                 </section>
 
-                <!-- Языки -->
                 <section class="page-break-inside-avoid">
-                    <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-5">Языки</h2>
-                    <ul class="space-y-3 text-sm">
+                    <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-5 print:mb-2 print:text-xs">Языки</h2>
+                    <ul class="space-y-3 text-sm print:space-y-1 print:text-xs">
                         <li class="flex items-center justify-between">
                             <span class="font-medium text-slate-800">Русский</span>
                             <span class="text-slate-500">Родной</span>
